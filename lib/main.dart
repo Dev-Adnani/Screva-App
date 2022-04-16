@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:screva/app/constant/app.provider.dart';
 import 'package:screva/app/routes/app.routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(const Lava());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Lava extends StatelessWidget {
+  const Lava({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: AppProvider.providers,
+      child: const Core(),
+    );
+  }
+}
+
+class Core extends StatelessWidget {
+  const Core({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

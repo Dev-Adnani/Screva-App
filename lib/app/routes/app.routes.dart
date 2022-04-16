@@ -19,11 +19,7 @@ class AppRouter {
       case videoRoute:
         {
           return MaterialPageRoute(
-            builder: (context) => VideoCallExp(
-              videoCallScreenArgs: ModalRoute.of(context)!.settings.arguments
-                  as VideoCallScreenArgs,
-            ),
-            settings: settings,
+            builder: (context) => const VideoCallExp(),
           );
         }
       case homeRoute:

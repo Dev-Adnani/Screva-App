@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:screva/app/constant/app.assets.dart';
 import 'package:screva/app/constant/app.colors.dart';
 import 'package:screva/app/constant/app.fonts.dart';
 import 'package:screva/app/routes/app.routes.dart';
+import 'package:screva/notifiers/id.notifier.dart';
+import 'package:screva/presentation/screens/videoCallScreen/videocall.screen.dart';
 import 'package:screva/presentation/widget/custom.text.field.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,6 +48,9 @@ class HomeScreen extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      Provider.of<IDnotifier>(context, listen: false).id =
+                          roomID.text;
+
                       Navigator.of(context).pushNamed(
                         AppRouter.videoRoute,
                       );
