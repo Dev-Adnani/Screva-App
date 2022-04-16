@@ -10,7 +10,7 @@ Watch Video - [Click Here]('')
 
 Screen 1               |  Screen 2  | Screen 3                            | 
 :-------------------------:|:-------------------------:|:-------------------------:|
-![](images/screen_4.png)|![](images/screen_5.png)|![](images/screen_3.png)|
+![](images/screen_1.png)|![](images/screen_2.png)|![](images/screen_3.png)|
 
 
 
